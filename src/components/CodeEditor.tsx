@@ -1,17 +1,21 @@
 import { useEffect } from "react";
-// @ts-ignore
-import NianceEditor from "niance-editor";
-import Navbar from "./Navbar";
-const Niance_Editor = () => {
+
+const NianceEditor = () => {
   useEffect(() => {
     const loadEditor = async () => {
       try {
-        console.log(NianceEditor);
+        const nianceEditor = await eval(
+          `import('hhttps://cdn.jsdelivr.net/npm/niance-editor@1.0.1/dist/niance-editor.umd.min.js')`
+        );
+
+        console.log("Loaded Niance Editor:", nianceEditor);
+
+        const { CreateEditor,InitializeEditor } = nianceEditor;
         const editor = document.querySelector(".editor");
 
         if (editor) {
-          NianceEditor.InitializeEditor(editor);
-          NianceEditor.CreateEditor();
+          InitializeEditor(editor);
+          CreateEditor();
         }
       } catch (error) {
         console.error("Failed to load Niance Editor:", error);
@@ -21,15 +25,7 @@ const Niance_Editor = () => {
     loadEditor();
   }, []);
 
-  return (
-    <>
-      <Navbar />
-      <div
-        className="editor"
-        style={{ minHeight: "300px", border: "1px solid #ddd", color: "green" }}
-      />
-    </>
-  );
+  return <div className="editor" style={{ minHeight: "300px", border: "1px solid #ddd" }} />;
 };
 
-export default Niance_Editor;
+export default NianceEditor;
