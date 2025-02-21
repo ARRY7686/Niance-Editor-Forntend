@@ -26,7 +26,6 @@ const Niance_Editor = () => {
       <Navbar />
       <div
         className="editor"
-        contentEditable={true}
         style={{ minHeight: "300px", border: "1px solid #ddd", color: "green" }}
       />
     </>
