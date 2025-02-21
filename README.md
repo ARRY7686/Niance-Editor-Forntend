@@ -9,13 +9,19 @@ This is the frontend for the Niance Editor, a web-based code editor built with R
 ├── index.html
 ├── package.json
 ├── public/
+│   ├──scene.bin
+│   ├──scene.gltf
 ├── README.md
 ├── src/
 │   ├── App.css
 │   ├── App.tsx
-│   ├── assets
+│   ├── routes/
+│   │   ├── Routes.tsx
+│   ├── Types/
+│   │   ├── three.d.ts
 │   ├── components/
 │   │   ├── CodeEditor.tsx
+│   │   ├── Hero.tsx
 │   │   ├── Navbar.tsx
 │   ├── main.tsx
 │   ├── vite-env.d.ts
