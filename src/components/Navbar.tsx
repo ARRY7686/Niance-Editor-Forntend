@@ -12,8 +12,8 @@ const Navbar: React.FC = () => {
   ]);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 bg-gray-900 p-2 md:p-4 shadow-lg w-full">
-      <div className="max-w-[853px] mx-auto px-3 md:px-6">
+    <nav className={`fixed top-4 left-1/2 -translate-x-1/2 bg-gray-900 p-2 md:p-4 shadow-lg w-[95%] max-w-[863px] z-50 ${isMenuOpen ? "" : "rounded-full"}`}>
+      <div className="relative mx-auto px-3 md:px-7">
         <div className="flex items-center justify-between">
           <h1 className="text-white text-base md:text-xl font-bold whitespace-nowrap">Niance Editor</h1>
 
@@ -54,13 +54,13 @@ const Navbar: React.FC = () => {
           </ul>
         </div>
 
-        <div className={`md:hidden ${isMenuOpen ? "block" : "hidden"}`}>
-          <ul className="pt-2 pb-3 space-y-1">
+        <div className={`md:hidden w-full ${isMenuOpen ? "block" : "hidden"}`}>
+          <ul className="divide-y divide-gray-800">
             {menuItems.map((item) => (
               <li key={item.name}>
                 <Link
                   to={item.path}
-                  className={`block px-4 py-2 text-base font-medium text-white rounded-lg ${
+                  className={`block px-6 py-3 text-base font-medium text-white transition-colors ${
                     location.pathname === item.path
                       ? "bg-gray-700/40 text-white"
                       : "hover:bg-gray-700/20 hover:text-gray-300"

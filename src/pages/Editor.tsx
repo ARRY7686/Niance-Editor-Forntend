@@ -1,6 +1,7 @@
 // @ts-ignore
 import NianceEditor from "niance-editor";
 import { useEffect } from "react";
+import CodeEditor from "../components/CodeEditor";
 export default function Editor() {
   useEffect(() => {
     const loadEditor = async () => {
@@ -20,11 +21,10 @@ export default function Editor() {
     loadEditor();
   }, []);
   return (
-    <div className="h-screen w-full bg-white/90 pt-[76px] md:pt-[82px]">
-      <div
-        contentEditable
-        className="editor min-h-screen border border-gray-400 bg-inherit"
-      />
-    </div>
+    <>
+      <div className="bg-gradient-to-b from-black to-gray-900">
+        <CodeEditor />
+      </div>
+    </>
   );
 }
