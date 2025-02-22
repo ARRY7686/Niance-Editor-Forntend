@@ -6,7 +6,7 @@ import AppRoutes from "./routes/Routes";
 
 const App: React.FC = () => {
   return (
-    <div className="bg-gradient-to-b from-black via-gray-950 to-gray-900 h-screen">
+    <div className="bg-gradient-to-b from-black via-gray-950 to-gray-900 min-h-screen">
       <Router>
         <Navbar />
         <AppRoutes />
