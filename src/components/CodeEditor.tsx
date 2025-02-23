@@ -6,6 +6,7 @@ const CodeEditor = () => {
           <div className="relative h-[700px]">
             <div
               contentEditable
+              spellCheck={false}
               className="editor absolute inset-0 w-full border border-slate-700 rounded-lg bg-black p-6 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent whitespace-pre-wrap break-words overflow-y-auto font-mono text-[15px] leading-relaxed text-slate-200"
             />
           </div>
