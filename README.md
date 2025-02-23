@@ -11,6 +11,10 @@ This is the frontend for the Niance Editor, a web-based code editor built with R
 ├── public/
 │   ├──scene.bin
 │   ├──scene.gltf
+│   ├──akshat.jpeg
+│   ├──Aadi.jpg
+│   ├──default.jpg
+│   ├──Ojas.jpg
 ├── README.md
 ├── src/
 │   ├── App.css
@@ -23,6 +27,11 @@ This is the frontend for the Niance Editor, a web-based code editor built with R
 │   │   ├── CodeEditor.tsx
 │   │   ├── Hero.tsx
 │   │   ├── Navbar.tsx
+│   │   ├── Footer.tsx
+│   │   ├── ProfileCard.tsx
+│   ├── Pages/
+│   │   ├── Editor.tsx
+│   │   ├── Team.tsx
 │   ├── main.tsx
 │   ├── vite-env.d.ts
 ├── tsconfig.app.json
@@ -57,21 +66,14 @@ npm run dev
 ```
 This will start the Vite development server at http://localhost:3000.
 
-### Building for Production
-```sh
-npm run build
-```
-The production-ready files will be generated in the `dist` directory.
-
-### Linting
-```sh
-npm run lint
-```
 
 ## Project Components
 
 - **Navbar.tsx**: Main navigation bar component
 - **CodeEditor.tsx**: Core editor component integrating Niance Editor
+- **Hero.tsx**: Adds the hero section
+- **ProfileCard.tsx**: Profile Card function for Team page
+- **Footer.tsx**: Footer for all the pages
 
 ## Configuration Files
 
