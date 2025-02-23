@@ -2,7 +2,6 @@ import { Github, Instagram, Linkedin, Twitter } from "lucide-react";
 interface ProfileCardProps {
   name: string;
   role: string;
-  bio: string;
   social?: {
     twitter: string | undefined;
     linkedin: string | undefined;
@@ -11,7 +10,7 @@ interface ProfileCardProps {
   };
   imageUrl: string;
 }
-export default function ProfileCard({ name, role, bio, social, imageUrl }: ProfileCardProps) {
+export default function ProfileCard({ name, role, social, imageUrl }: ProfileCardProps) {
   return (
     <div className="w-full max-w-sm h-full">
       <div className="bg-white/5 backdrop-blur-sm rounded-xl shadow-lg relative hover:shadow-xl transition-shadow duration-300 border border-white/10 h-full flex flex-col">
@@ -27,7 +26,6 @@ export default function ProfileCard({ name, role, bio, social, imageUrl }: Profi
         <div className="text-center px-4 sm:px-6 pb-8 pt-6 flex-1 flex flex-col">
           <h2 className="text-2xl font-bold text-white mb-1">{name}</h2>
           <h3 className="text-lg text-[#D4B483] font-medium mb-4">{role}</h3>
-          <p className="text-sm text-gray-300 leading-relaxed max-w-xs mx-auto flex-1">{bio}</p>
           
           {social && (
             <div className="flex justify-center space-x-4 mt-6">

@@ -112,7 +112,7 @@ function Hero() {
                             GitHub (Editor)
                         </a>
                         <a 
-                            href="https://github.com/ojasmaheshwari/website-repo" 
+                            href="https://github.com/ARRY7686/Niance-Editor-Forntend" 
                             target="_blank" 
                             rel="noopener noreferrer"
                             className="px-6 py-3 text-white text-lg font-semibold bg-gray-800 rounded-md shadow-md transition transform duration-300 ease-in-out hover:bg-gray-700 hover:scale-105"

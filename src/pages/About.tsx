@@ -1,35 +1,35 @@
 import ProfileCard from "../components/ProfileCard";
-import akshat from "../assets/akshat.jpeg";
+import akshat from "/akshat.jpeg";
+import Ojas from "/Ojas.jpg";
+import Aadi from "/Aadi.jpg";
+import DefaultPic from "/default.jpg"
 export default function About() {
   const teamMembers = [
     {
       name: "Ojas Maheshwari",
-      role: "Lead Developer",
-      bio: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
-      imageUrl: "/team/jane-doe.jpg",
+      role: "Project lead, Developer, Researcher",
+      imageUrl: Ojas,
       social: {
         twitter: undefined,
-        linkedin: undefined,
+        linkedin: "https://www.linkedin.com/in/0jasmaheshwari/",
         github: "https://github.com/ojasmaheshwari",
         instagram: undefined,
       },
     },
     {
       name: "Aadi Gupta",
-      role: "Lead Developer",
-      bio: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
-      imageUrl: "/team/john-smith.jpg",
+      role: "Developer, Researcher, UI and UX in-charge",
+      imageUrl: Aadi,
       social: {
         twitter: undefined,
-        linkedin: undefined,
+        linkedin: "https://www.linkedin.com/in/aadi-gupta-600605247/",
         github: "https://github.com/ARRY7686",
         instagram: undefined,
       },
     },
     {
       name: "Akshat Sipany",
-      role: "Lead Developer",
-      bio: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
+      role: "Developer, Researcher",
       imageUrl: akshat,
       social: {
         twitter: "https://x.com/akshat2106",
@@ -40,12 +40,11 @@ export default function About() {
     },
     {
       name: "Arjun Yadav",
-      role: "Lead Developer",
-      bio: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
-      imageUrl: "/team/john-smith.jpg",
+      role: "Developer,Researcher",
+      imageUrl: DefaultPic,
       social: {
         twitter: undefined,
-        linkedin: undefined,
+        linkedin: "https://www.linkedin.com/in/arjunydv/",
         github: undefined,
         instagram: undefined,
       },
@@ -63,7 +62,6 @@ export default function About() {
             <ProfileCard
               name={member.name}
               role={member.role}
-              bio={member.bio}
               social={member.social}
               imageUrl={member.imageUrl}
             />
