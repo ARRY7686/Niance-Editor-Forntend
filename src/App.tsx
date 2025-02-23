@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import { BrowserRouter as Router } from "react-router-dom";
 import "./App.css";
 import AppRoutes from "./routes/Routes";
+import Footer from "./components/Footer";
 
 const App: React.FC = () => {
   return (
@@ -10,6 +11,7 @@ const App: React.FC = () => {
       <Router>
         <Navbar />
         <AppRoutes />
+        <Footer />
       </Router>
     </div>
   );
