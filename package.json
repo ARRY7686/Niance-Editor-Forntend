@@ -14,7 +14,7 @@
     "@mui/material": "^6.4.5",
     "@tailwindcss/vite": "^4.0.7",
     "lucide-react": "^0.475.0",
-    "niance-editor": "^1.0.1",
+    "niance-editor": "^1.0.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^7.2.0",

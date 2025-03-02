@@ -14,7 +14,7 @@ function Hero() {
 
         const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
         renderer.setSize(mount.clientWidth, mount.clientHeight);
-        renderer.setClearColor(0x000000, 0); // Fully transparent
+        renderer.setClearColor(0x000000, 0); 
         mount.appendChild(renderer.domElement);
 
         const scene = new THREE.Scene();
