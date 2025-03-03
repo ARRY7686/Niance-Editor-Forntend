@@ -45,7 +45,7 @@
 }
 #___suggestion-container___ .___first-dummy-suggestion___,
 #___suggestion-container___ .___last-dummy-suggestion___ {
-    display: none;
+	opacity: 0;
 }
 .editor {
   counter-reset: line;
