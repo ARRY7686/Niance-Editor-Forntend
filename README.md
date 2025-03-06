@@ -9,27 +9,33 @@ This is the frontend for the Niance Editor, a web-based code editor built with R
 ├── index.html
 ├── package.json
 ├── public/
-│   ├──scene.bin
-│   ├──scene.gltf
-│   ├──akshat.jpeg
-│   ├──Aadi.jpg
-│   ├──default.jpg
-│   ├──Ojas.jpg
+│   ├── assets/
+│   │   ├── scene.bin
+│   │   ├── scene.gltf
+│   │   ├── team/
+│   │   │   ├── akshat.jpeg
+│   │   │   ├── Aadi.jpg
+│   │   │   ├── default.jpg
+│   │   │   ├── Ojas.jpg
 ├── README.md
 ├── src/
-│   ├── App.css
+│   ├── assets/
+│   │   ├── styles/
+│   │   │   ├── App.css
 │   ├── App.tsx
 │   ├── routes/
 │   │   ├── Routes.tsx
-│   ├── Types/
+│   ├── types/
 │   │   ├── three.d.ts
 │   ├── components/
-│   │   ├── CodeEditor.tsx
-│   │   ├── Hero.tsx
-│   │   ├── Navbar.tsx
-│   │   ├── Footer.tsx
-│   │   ├── ProfileCard.tsx
-│   ├── Pages/
+│   │   ├── editor/
+│   │   │   ├── CodeEditor.tsx
+│   │   ├── common/
+│   │   │   ├── Hero.tsx
+│   │   │   ├── Navbar.tsx
+│   │   │   ├── Footer.tsx
+│   │   │   ├── ProfileCard.tsx
+│   ├── pages/
 │   │   ├── Editor.tsx
 │   │   ├── Team.tsx
 │   ├── main.tsx
