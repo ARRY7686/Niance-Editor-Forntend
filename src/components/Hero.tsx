@@ -3,7 +3,7 @@ import { Github } from "lucide-react";
 import { Link } from "react-router-dom";
 const Hero = () => {
   return (
-    <section className="relative pt-28 md:pt-36 pb-20 overflow-hidden">
+    <section className="relative pt-28 md:pt-36 pb-20 overflow-hidden h-[100dvh] flex justify-center items-center">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col items-center text-center">
           <div className="w-full max-w-3xl mx-auto opacity-0 animate-fade-up">
