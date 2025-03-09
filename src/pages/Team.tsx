@@ -2,7 +2,7 @@ import ProfileCard from "../components/ProfileCard";
 import akshat from "/akshat.jpeg";
 import Ojas from "/Ojas.jpg";
 import Aadi from "/Aadi.jpg";
-import DefaultPic from "/default.jpg"
+import DefaultPic from "/default.jpg";
 export default function About() {
   const teamMembers = [
     {
@@ -52,7 +52,7 @@ export default function About() {
   ];
 
   return (
-    <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 pt-50">
+    <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 pt-24">
       <h1 className="text-3xl font-bold text-center mb-10 text-white">
         Our Team
       </h1>

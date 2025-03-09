@@ -1,6 +1,6 @@
 const CodeEditor = () => {
   return (
-    <div className="min-h-screen w-full bg-gradient-to-b from-black to-gray-900 pt-[76px] md:pt-[82px]">
+    <div className="animate-fade-up min-h-screen w-full bg-gradient-to-b from-black to-gray-900 pt-[76px] md:pt-[82px]">
       <div className="mx-auto max-w-5xl px-6 py-8">
         <div className="rounded-xl bg-black/50 backdrop-blur-sm shadow-lg p-8">
           <div className="relative h-[700px]">

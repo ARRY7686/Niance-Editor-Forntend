@@ -1,78 +1,109 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { Button } from "@/components/ui/button";
+import { Menu, X } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 
-const Navbar: React.FC = () => {
-  const location = useLocation();
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+const Navbar = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [menuItems] = useState([
-    { name: "Home", path: "/" },
-    { name: "Team", path: "/team" },
-    { name: "Try It Now", path: "/project" },
-    { name: "Contribute", path: "/contribute" },
+    { name: "HOME", path: "/" },
+    { name: "TEAM", path: "/team" },
+    { name: "TRY IT NOW", path: "/project" },
+    { name: "CONTRIBUTE", path: "/contribute" },
   ]);
+  const location = useLocation();
+
+  const isActive = (href: string) => {
+    return location.pathname === href;
+  };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 10) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const handleTabClick = () => {
+    setMobileMenuOpen(false);
+  };
 
   return (
-    <nav className={`fixed top-4 left-1/2 -translate-x-1/2 bg-gray-900 p-2 md:p-4 shadow-lg w-[95%] max-w-[863px] z-50 ${isMenuOpen ? "" : "rounded-full"}`}>
-      <div className="relative mx-auto px-3 md:px-7">
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled
+          ? "py-3 bg-niance-bg/90 backdrop-blur-md shadow-md"
+          : "py-5 bg-transparent"
+      }`}
+    >
+      <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between">
-          <h1 className="text-white text-base md:text-xl font-bold whitespace-nowrap">Niance Editor</h1>
-
-          <button
-            className="md:hidden text-white p-2"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          <Link
+            to="/"
+            className="text-2xl font-bold text-niance-text flex items-center"
           >
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
+            Niance Editor
+          </Link>
+
+          <div className="hidden md:flex items-center space-x-1">
+            {menuItems.map((item) => (
+              <Button
+                key={item.name}
+                variant="ghost"
+                className={`relative hover:bg-niance-card/50 text-niance-text ${
+                  isActive(item.path)
+                    ? "after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-niance-accent"
+                    : ""
+                }`}
+                onClick={handleTabClick}
+              >
+                <Link to={item.path} className="cursor-pointer">
+                  {item.name}
+                </Link>
+              </Button>
+            ))}
+          </div>
+
+          <div className="md:hidden">
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="text-niance-text cursor-pointer"
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d={isMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}
-              />
-            </svg>
-          </button>
-
-          <ul className="hidden md:flex space-x-6 bg-transparent rounded-full h-[50px] px-6 py-2">
-            {menuItems.map((item) => (
-              <li key={item.name}>
-                <Link
-                  to={item.path}
-                  className={`text-white px-6 py-2 rounded-full transition-all duration-300 ease-in-out text-lg font-semibold tracking-normal uppercase ${
-                    location.pathname === item.path
-                      ? "bg-gray-700/40 text-white shadow-md"
-                      : "hover:bg-gray-700/20 hover:text-gray-300"
-                  }`}
-                >
-                  {item.name}
-                </Link>
-              </li>
-            ))}
-          </ul>
+              {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </Button>
+          </div>
         </div>
 
-        <div className={`md:hidden w-full ${isMenuOpen ? "block" : "hidden"}`}>
-          <ul className="divide-y divide-gray-800">
-            {menuItems.map((item) => (
-              <li key={item.name}>
-                <Link
-                  to={item.path}
-                  className={`block px-6 py-3 text-base font-medium text-white transition-colors ${
-                    location.pathname === item.path
-                      ? "bg-gray-700/40 text-white"
-                      : "hover:bg-gray-700/20 hover:text-gray-300"
+        {mobileMenuOpen && (
+          <div className="md:hidden absolute top-full left-0 right-0 bg-niance-bg/95 backdrop-blur-md border-t border-white/5 animate-fade-in">
+            <div className="flex flex-col p-4 space-y-2">
+              {menuItems.map((item) => (
+                <Button
+                  key={item.name}
+                  variant="ghost"
+                  className={`justify-start hover:bg-niance-card/50 text-niance-text relative ${
+                    isActive(item.path)
+                      ? "after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-niance-accent"
+                      : ""
                   }`}
-                  onClick={() => setIsMenuOpen(false)}
                 >
-                  {item.name}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
+                  <Link to={item.path} onClick={handleTabClick}>
+                    {item.name}
+                  </Link>
+                </Button>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </nav>
   );
