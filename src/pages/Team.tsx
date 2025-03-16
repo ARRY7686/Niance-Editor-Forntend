@@ -1,8 +1,8 @@
 import ProfileCard from "../components/ProfileCard";
-import akshat from "/akshat.jpeg";
-import Ojas from "/Ojas.jpg";
-import Aadi from "/Aadi.jpg";
-import DefaultPic from "/default.jpg";
+import akshat from "/assets/team/akshat.jpeg";
+import Ojas from "/assets/team/Ojas.jpg";
+import Aadi from "/assets/team/Aadi.jpg";
+import DefaultPic from "/assets/team/default.jpg";
 export default function About() {
   const teamMembers = [
     {
