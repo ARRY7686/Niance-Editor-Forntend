@@ -4,14 +4,12 @@ This is the frontend for the Niance Editor, a web-based code editor built with R
 
 ## Project Structure
 ```
-├── .gitignore
-├── eslint.config.js
-├── index.html
-├── package.json
+├── .github/
+│   └── ISSUE_TEMPLATE/
+│       ├── bug_report.md
+│       └── feature_request.md
 ├── public/
 │   ├── assets/
-│   │   ├── scene.bin
-│   │   ├── scene.gltf
 │   │   ├── team/
 │   │   │   ├── akshat.jpeg
 │   │   │   ├── Aadi.jpg
@@ -19,27 +17,37 @@ This is the frontend for the Niance Editor, a web-based code editor built with R
 │   │   │   ├── Ojas.jpg
 ├── README.md
 ├── src/
-│   ├── assets/
-│   │   ├── styles/
-│   │   │   ├── App.css
+│   ├── App.css
 │   ├── App.tsx
 │   ├── routes/
 │   │   ├── Routes.tsx
-│   ├── types/
-│   │   ├── three.d.ts
 │   ├── components/
-│   │   ├── editor/
-│   │   │   ├── CodeEditor.tsx
-│   │   ├── common/
-│   │   │   ├── Hero.tsx
-│   │   │   ├── Navbar.tsx
-│   │   │   ├── Footer.tsx
-│   │   │   ├── ProfileCard.tsx
+│   │   ├── ui/
+│   │   │   └── button.tsx
+│   │   │   └── Features.tsx
+│   │   ├── CodeEditor.tsx
+│   │   ├── Hero.tsx
+│   │   ├── Navbar.tsx
+│   │   ├── Footer.tsx
+│   │   ├── ProfileCard.tsx
+│   │   ├── Features.tsx
+│   ├── lib/
+│   │   ├── utils.ts
 │   ├── pages/
+│   │   ├── Contributions.tsx
 │   │   ├── Editor.tsx
 │   │   ├── Team.tsx
+│   │   ├── LandingPage.tsx
 │   ├── main.tsx
 │   ├── vite-env.d.ts
+├── .gitignore
+├── CODE_OF_CONDUCT.md
+├── components.json
+├── eslint.config.js
+├── index.html
+├── LICENSE
+├── package.json
+├── README.md
 ├── tsconfig.app.json
 ├── tsconfig.json
 ├── tsconfig.node.json

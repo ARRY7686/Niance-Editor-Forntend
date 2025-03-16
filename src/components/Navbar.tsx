@@ -84,7 +84,7 @@ const Navbar = () => {
         </div>
 
         {mobileMenuOpen && (
-          <div className="md:hidden absolute top-full left-0 right-0 bg-niance-bg/95 backdrop-blur-md border-t border-white/5 animate-fade-in">
+          <div className="md:hidden absolute top-full left-0 right-0 bg-niance-bg/95 border-t border-white/5 transform transition-transform duration-200 ease-in-out">
             <div className="flex flex-col p-4 space-y-2">
               {menuItems.map((item) => (
                 <Button

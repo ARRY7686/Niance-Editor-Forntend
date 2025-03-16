@@ -29,7 +29,7 @@ const LandingPage = () => {
 
   return (
     <div className="min-h-screen flex flex-col bg-niance-bg text-niance-text">
-      <main className="flex-grow">
+      <main className="flex-grow flex flex-col pb-16">
         <Hero />
         <Features />
       </main>
