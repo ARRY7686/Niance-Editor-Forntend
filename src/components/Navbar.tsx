@@ -74,19 +74,22 @@ const Navbar = () => {
 
           <div className="hidden md:flex items-center space-x-1">
             {menuItems.map((item) => (
-              <Button
+              <Link
                 key={item.name}
-                variant="ghost"
-                className={`relative hover:bg-niance-card/50 text-niance-text ${isActive(item.path)
-                    ? "after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-niance-accent"
-                    : ""
-                  }`}
+                to={item.path}
+                className="w-full"
                 onClick={handleTabClick}
               >
-                <Link to={item.path} className="cursor-pointer">
+                <Button
+                  variant="ghost"
+                  className={`relative hover:bg-niance-card/50 text-niance-text w-full ${isActive(item.path)
+                      ? "after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-niance-accent"
+                      : ""
+                    }`}
+                >
                   {item.name}
-                </Link>
-              </Button>
+                </Button>
+              </Link>
             ))}
           </div>
 
@@ -112,18 +115,22 @@ const Navbar = () => {
         >
           <div className="flex flex-col p-4 space-y-2">
             {menuItems.map((item) => (
-              <Button
+              <Link
                 key={item.name}
-                variant="ghost"
-                className={`justify-start hover:bg-niance-card/50 text-niance-text relative transition-colors duration-200 ${isActive(item.path)
-                    ? "after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-niance-accent"
-                    : ""
-                  }`}
+                to={item.path}
+                className="w-full"
+                onClick={handleTabClick}
               >
-                <Link to={item.path} onClick={handleTabClick}>
+                <Button
+                  variant="ghost"
+                  className={`justify-start hover:bg-niance-card/50 text-niance-text relative transition-colors duration-200 w-full ${isActive(item.path)
+                      ? "after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-niance-accent"
+                      : ""
+                    }`}
+                >
                   {item.name}
-                </Link>
-              </Button>
+                </Button>
+              </Link>
             ))}
           </div>
         </div>
