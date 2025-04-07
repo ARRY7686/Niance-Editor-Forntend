@@ -53,6 +53,7 @@ This is the frontend for the Niance Editor, a web-based code editor built with R
 ├── tsconfig.json
 ├── tsconfig.node.json
 └── vite.config.ts
+└── vercel.json
 ```
 
 ## Getting Started
