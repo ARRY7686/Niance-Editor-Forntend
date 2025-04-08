@@ -168,7 +168,7 @@ export default function ContributorStats() {
                 type="monotone"
                 dataKey="codeEditor"
                 stroke="#8884d8"
-                name="Code Editor"
+                name="Niance Editor"
                 strokeWidth={2}
                 dot={false}
               />
@@ -176,7 +176,7 @@ export default function ContributorStats() {
                 type="monotone"
                 dataKey="nianceEditor"
                 stroke="#82ca9d"
-                name="Niance Editor"
+                name="Frontend Website"
                 strokeWidth={2}
                 dot={false}
               />
@@ -184,7 +184,7 @@ export default function ContributorStats() {
                 type="monotone"
                 dataKey="nicoEditor"
                 stroke="#ffc658"
-                name="Nico Editor"
+                name="Nico Text Editor"
                 strokeWidth={2}
                 dot={false}
               />
@@ -195,17 +195,39 @@ export default function ContributorStats() {
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div className="bg-gray-800 p-6 rounded-lg">
-          <h3 className="text-xl font-semibold text-white mb-4">Code Editor Contributors</h3>
+          <h3 className="text-xl font-semibold text-white mb-4">
+            <a 
+              href="https://github.com/ojasmaheshwari/CodeEditorFromScratch-JS"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-blue-400 transition-colors"
+            >
+              Niance Editor Contributors
+            </a>
+          </h3>
           <div className="space-y-4">
             {contributors.codeEditor.map((contributor) => (
               <div key={contributor.login} className="flex items-center space-x-3">
-                <img
-                  src={contributor.avatar_url}
-                  alt={contributor.login}
-                  className="w-10 h-10 rounded-full"
-                />
+                <a
+                  href={`https://github.com/${contributor.login}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src={contributor.avatar_url}
+                    alt={contributor.login}
+                    className="w-10 h-10 rounded-full hover:ring-2 hover:ring-blue-400 transition-all"
+                  />
+                </a>
                 <div>
-                  <p className="text-white font-medium">{contributor.login}</p>
+                  <a
+                    href={`https://github.com/${contributor.login}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white font-medium hover:text-blue-400 transition-colors"
+                  >
+                    {contributor.login}
+                  </a>
                   <p className="text-gray-400 text-sm">
                     {contributor.contributions} contributions
                   </p>
@@ -216,17 +238,39 @@ export default function ContributorStats() {
         </div>
 
         <div className="bg-gray-800 p-6 rounded-lg">
-          <h3 className="text-xl font-semibold text-white mb-4">Niance Editor Contributors</h3>
+          <h3 className="text-xl font-semibold text-white mb-4">
+            <a 
+              href="https://github.com/ARRY7686/Niance-Editor-Forntend"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-blue-400 transition-colors"
+            >
+              Frontend Website Contributors
+            </a>
+          </h3>
           <div className="space-y-4">
             {contributors.nianceEditor.map((contributor) => (
               <div key={contributor.login} className="flex items-center space-x-3">
-                <img
-                  src={contributor.avatar_url}
-                  alt={contributor.login}
-                  className="w-10 h-10 rounded-full"
-                />
+                <a
+                  href={`https://github.com/${contributor.login}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src={contributor.avatar_url}
+                    alt={contributor.login}
+                    className="w-10 h-10 rounded-full hover:ring-2 hover:ring-blue-400 transition-all"
+                  />
+                </a>
                 <div>
-                  <p className="text-white font-medium">{contributor.login}</p>
+                  <a
+                    href={`https://github.com/${contributor.login}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white font-medium hover:text-blue-400 transition-colors"
+                  >
+                    {contributor.login}
+                  </a>
                   <p className="text-gray-400 text-sm">
                     {contributor.contributions} contributions
                   </p>
@@ -237,17 +281,39 @@ export default function ContributorStats() {
         </div>
 
         <div className="bg-gray-800 p-6 rounded-lg">
-          <h3 className="text-xl font-semibold text-white mb-4">Nico Editor Contributors</h3>
+          <h3 className="text-xl font-semibold text-white mb-4">
+            <a 
+              href="https://github.com/ojasmaheshwari/Nico-Text-Editor"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-blue-400 transition-colors"
+            >
+              Nico Text Editor Contributors
+            </a>
+          </h3>
           <div className="space-y-4">
             {contributors.nicoEditor.map((contributor) => (
               <div key={contributor.login} className="flex items-center space-x-3">
-                <img
-                  src={contributor.avatar_url}
-                  alt={contributor.login}
-                  className="w-10 h-10 rounded-full"
-                />
+                <a
+                  href={`https://github.com/${contributor.login}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src={contributor.avatar_url}
+                    alt={contributor.login}
+                    className="w-10 h-10 rounded-full hover:ring-2 hover:ring-blue-400 transition-all"
+                  />
+                </a>
                 <div>
-                  <p className="text-white font-medium">{contributor.login}</p>
+                  <a
+                    href={`https://github.com/${contributor.login}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white font-medium hover:text-blue-400 transition-colors"
+                  >
+                    {contributor.login}
+                  </a>
                   <p className="text-gray-400 text-sm">
                     {contributor.contributions} contributions
                   </p>
