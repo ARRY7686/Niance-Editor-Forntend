@@ -14,7 +14,7 @@ const Hero = () => {
               An editor fully incorporated in your web
             </p>
 
-            <div className="flex flex-wrap items-center justify-center gap-4 mb-8">
+            <div className="flex flex-col items-center gap-4 mb-8">
               <Button
                 size="lg"
                 className="cursor-pointer bg-niance-accent hover:bg-niance-accent/90 text-white px-8 animate-fade-up animate-delay-100"
@@ -22,37 +22,55 @@ const Hero = () => {
                 <Link to="/project">Try It Now</Link>
               </Button>
 
-              <Button
-                variant="outline"
-                size="lg"
-                className="cursor-pointer border-white/10 bg-white/5 backdrop-blur-sm hover:bg-white/10 text-niance-text px-6 animate-fade-up animate-delay-200"
-              >
-                <Link
-                  to="https://github.com/ojasmaheshwari/CodeEditorFromScratch-JS"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center"
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="cursor-pointer border-white/10 bg-white/5 backdrop-blur-sm hover:bg-white/10 text-niance-text px-6 animate-fade-up animate-delay-200"
                 >
-                  <Github className="mr-2 h-5 w-5" />
-                  GitHub (Editor)
-                </Link>
-              </Button>
+                  <Link
+                    to="https://github.com/ojasmaheshwari/CodeEditorFromScratch-JS"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center"
+                  >
+                    <Github className="mr-2 h-5 w-5" />
+                    GitHub (Niance Editor)
+                  </Link>
+                </Button>
 
-              <Button
-                variant="outline"
-                size="lg"
-                className="cursor-pointer border-white/10 bg-white/5 backdrop-blur-sm hover:bg-white/10 text-niance-text px-6 animate-fade-up animate-delay-300"
-              >
-                <Link
-                  to="https://github.com/ARRY7686/Niance-Editor-Forntend"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center"
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="cursor-pointer border-white/10 bg-white/5 backdrop-blur-sm hover:bg-white/10 text-niance-text px-6 animate-fade-up animate-delay-300"
                 >
-                  <Github className="mr-2 h-5 w-5" />
-                  GitHub (Website)
-                </Link>
-              </Button>
+                  <Link
+                    to="https://github.com/ARRY7686/Niance-Editor-Forntend"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center"
+                  >
+                    <Github className="mr-2 h-5 w-5" />
+                    GitHub (Website)
+                  </Link>
+                </Button>
+
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="cursor-pointer border-white/10 bg-white/5 backdrop-blur-sm hover:bg-white/10 text-niance-text px-6 animate-fade-up animate-delay-300"
+                >
+                  <Link
+                    to="https://github.com/ojasmaheshwari/Nico-Text-Editor"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center"
+                  >
+                    <Github className="mr-2 h-5 w-5" />
+                    GitHub (Text Editor)
+                  </Link>
+                </Button>
+              </div>
             </div>
           </div>
         </div>
